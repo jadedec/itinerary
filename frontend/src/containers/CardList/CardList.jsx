@@ -15,10 +15,13 @@ const CardList = ({ itinerariesArr }) => {
     )
   })
 
- 
   const message = <p>Sorry. No beer has been found.</p>
 
-  return <div className="cardList">itinerariesArr ? {cardListJSX} : {message}</div>
+  return (
+    <div className="cardList">
+      ({itinerariesArr}?{cardListJSX}:{message})
+    </div>
+  )
 }
 
 export default CardList

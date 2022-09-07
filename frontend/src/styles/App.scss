@@ -1,0 +1,9 @@
+@use './reset' as *;
+@use './variables' as *;
+
+.app {
+  color: $color-primary;
+  display: flex;
+  flex-direction: column;
+  //background-color: $color-grey;
+}

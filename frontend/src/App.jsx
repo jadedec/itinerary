@@ -1,10 +1,7 @@
 import './styles/App.scss'
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
-
-
-
-
+import All from './pages/All/All'
 
 const App = () => {
   return (
@@ -14,9 +11,9 @@ const App = () => {
           <Routes>
             <Route path="/home" element={<Home />} />
             {/* <Route path="/new" element={<New />} />
-            <Route path="/manage" element={<Manage />} />
-            <Route path="/all" element={<All />} /> */}
-            
+            <Route path="/manage" element={<Manage />} /> */}
+            <Route path="/all" element={<All />} />
+
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         </div>

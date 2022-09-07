@@ -1,35 +1,37 @@
 import './Home.scss'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import Card from '../../components/Card/Card'
+import Layout from '../../containers/Layout/Layout'
 
 const Home = () => {
+  const [randomItinerary, setRandomItinerary] = useState('')
+
+  const getRandomItinerary = async () => {
+    const response = await fetch('http://localhost:8080/random-itinerary')
+    const randomItinerary = await response.json
+    setRandomItinerary(randomItinerary)
+  }
+
+  useEffect(() => {
+    getRandomItinerary()
+  }, [])
+
   return (
-    <div className="home">
-      <p>
-        Everyone wants their journey to be wonderful, and making an itinerary in advance is a great
-        help. Here you can make your own itinerary to make it more well-planned and organised.
-        <br />
-        Anyway, enjoy your trip!
-      </p>
+    <Layout>
+      <div className="home">
+        <p>Enjoy your holiday!</p>
 
-      <Link to="/all" className="home__link">
-        All
-      </Link>
-      <p className="home__explanation">
-        Show all itineraries or search and filter for who you want.
-      </p>
-
-      <Link to="/new" className="home__link">
-        New
-      </Link>
-      <p className="home__explanation">
-        Update the database by adding a new entry or editing an existing one
-      </p>
-
-      <Link to="/manage" className="home__link">
-        Manage
-      </Link>
-      <p className="home__explanation">Something wrong? Delete an entry from the database</p>
-    </div>
+        <h2> A trip for you</h2>
+        <Card
+          id={randomItinerary.id}
+          destination={randomItinerary.destination}
+          img={randomItinerary.img}
+          createdBy={randomItinerary.createdBy}
+          country={randomItinerary.country}
+          route={randomItinerary.route}
+        />
+      </div>
+    </Layout>
   )
 }
 

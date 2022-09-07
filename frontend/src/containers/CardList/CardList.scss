@@ -1,4 +1,4 @@
-@use '../../assets/sass/variables' as *;
+@use '../../styles/variables' as *;
 
 .cardList {
   margin-top: 4rem;
@@ -8,5 +8,5 @@
   column-gap: 0.5rem;
   row-gap: 1rem;
   font-size: 2rem;
-  color: $color-black;
+  color: $color-primary;
 }
