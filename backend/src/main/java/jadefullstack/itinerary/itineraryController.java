@@ -33,5 +33,10 @@ public class itineraryController {
         return ResponseEntity.status(HttpStatus.OK).body(itineraries);
     }
 
+    @GetMapping("/random-itinerary")
+    public ResponseEntity<Itinerary> getRandom() {
+        Itinerary randomItinerary = itineraryService.getRandom();
+        return ResponseEntity.status(HttpStatus.OK).body(randomItinerary);
+    }
 
 }
