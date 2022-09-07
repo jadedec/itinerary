@@ -5,13 +5,9 @@ import jadefullstack.itinerary.service.ItineraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Random;
 
 import static java.lang.Integer.parseInt;
 
@@ -33,10 +29,37 @@ public class itineraryController {
         return ResponseEntity.status(HttpStatus.OK).body(itineraries);
     }
 
+    @GetMapping("/itineraries/destination/{destination}")
+    public ResponseEntity<List<Itinerary>> getItinerariesByDestination(@PathVariable String destination) {
+        List<Itinerary> itineraries = itineraryService.getItinerariesByDestination(destination);
+        return ResponseEntity.status(HttpStatus.OK).body(itineraries);
+    }
+
     @GetMapping("/random-itinerary")
     public ResponseEntity<Itinerary> getRandom() {
         Itinerary randomItinerary = itineraryService.getRandom();
         return ResponseEntity.status(HttpStatus.OK).body(randomItinerary);
+    }
+
+    @PostMapping("/itinerary")
+    public ResponseEntity<?> createItinerary(@RequestBody Itinerary itinerary) {
+        try {
+            Itinerary newItinerary = itineraryService.createItinerary(itinerary);
+            return ResponseEntity.status(HttpStatus.OK).body(newItinerary);
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+    @DeleteMapping("/itinerary/{id}")
+    public ResponseEntity<?> deleteItinerary(@PathVariable String id) {
+
+        boolean isDeleted = itineraryService.deleteById(parseInt(id));
+
+        if (isDeleted == false) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("couldn't find am itinerary to deal with");
+        }
+        return ResponseEntity.status(HttpStatus.OK).body("itinerary deleted successfully");
     }
 
 }

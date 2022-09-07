@@ -82,7 +82,7 @@ public class ItineraryService {
         return itineraries;
     }
 
-    public int deleteGreetingByCreatedBy(String createdBy) {
+    public int deleteItineraryByCreatedBy(String createdBy) {
         int deleteCount = itineraryRepository.deleteGreetingCreatedBy(createdBy);
         return deleteCount;
     }

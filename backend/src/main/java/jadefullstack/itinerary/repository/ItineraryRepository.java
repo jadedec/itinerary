@@ -20,6 +20,6 @@ public interface ItineraryRepository extends JpaRepository<Itinerary, Integer> {
 
     @Modifying
     @Query("delete Itinerary g where g.createdBy = :createdBy")
-    int deleteGreetingCreatedBy(String createdBy);
+    int deleteItineraryCreatedBy(String createdBy);
 
 }
