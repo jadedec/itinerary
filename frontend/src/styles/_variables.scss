@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+// breakpoints
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$tablet-portrait: 820px;
+$desktop-breakpoint: 1024px;
+$medium-desktop-breakpoint: 1280px;
+$large-desktop-breakpoint: 1440px;
+$extra-large-desktop-breakpoint: 2560px;
+
+//colors
+$color-white: #ffffff;
+$color-primary: #000000;
+$color-secondary-light: #1e2332;
+$color-secondary-dark: #0b1226;
+$color-accent: #9baacf;
+$color-border: #3f4f74;
+$color-text-border: #415839;
+$color-dropdown: #424b62;
+$color-button-right: #7dc833;
+$color-button-right-hover: #abe76e;
+$color-button-wrong: #f27b39;
+$color-button-wrong-hover: #ee9260;
+$color-validation-button-background: rgba(0, 0, 0, 0.46);
+$color-underline: #0d6efd;
+$color-blending-phonic-primary: #ffffff;
+$color-blending-phonic-secondary: #c5d32a;
+$color-button-speaker: #0d6efd;
+$color-button-speaker-hover: #2d81ff;
+$color-logout-button: #272e3f;
+
+//text
+$font-primary: 'Inter';
+$font-secondary: 'Koulen';

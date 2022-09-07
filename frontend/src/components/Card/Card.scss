@@ -1,0 +1,59 @@
+@use "../../assets/sass/variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
+
+.card{
+    border-radius: 15px;
+    width:17rem;
+    height:26rem;
+    text-align: center;
+
+    
+    &-img{
+        height: 20rem;
+    }
+    &-name{
+        font-size: 1.2rem;
+        height: 2rem;
+    }
+
+    &-content{
+        position:relative;
+        bottom: 100%;
+        width:17rem;
+        height:26rem;
+        background-color: $color-black;
+        color:$color-white;
+        border-radius: 20px;;
+        visibility: hidden;
+
+        &__name{
+            padding-top: 2rem;
+            font-size: 1.5rem;
+            height:2.5rem;
+        }
+
+        &__character{
+            font-size: 1rem;
+            padding: 0px 20px;
+            overflow:hidden;
+
+            &-tagline{
+                font-family: 'Square Peg', cursive;
+                font-size: 1.2rem;
+            }
+        }
+
+        &__button {
+            color:$color-white;
+            min-width: 80px;
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: transparent;
+            border: 2px solid $color-primary;
+        }
+    }
+    &:hover > &-content{
+        visibility: visible;
+        }
+}

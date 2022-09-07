@@ -1,27 +1,28 @@
-import "./App.scss";
-import { useState, useEffect } from "react";
+import './styles/App.scss'
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home/Home'
+
+
+
+
 
 const App = () => {
-
-  const [message, setMessage] = useState("");
-
-  const welcome = () => {
-    fetch('/welcome')
-    const text = Response.text();
-      setMessage(text);
-  }
-
-  useEffect(() => {
-    welcome();
-  }, [message]);
-
   return (
-    <div className="app">
-      <header className="greeting">
-        <h1 className="greeting__heading">{message}</h1>
-      </header>
-    </div>
-  );
-};
+    <Router>
+      <div className="app">
+        <div className="main">
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            {/* <Route path="/new" element={<New />} />
+            <Route path="/manage" element={<Manage />} />
+            <Route path="/all" element={<All />} /> */}
+            
+            <Route path="*" element={<Navigate to="/home" replace />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  )
+}
 
-export default App;
+export default App
