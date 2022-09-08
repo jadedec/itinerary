@@ -28,5 +28,19 @@ const itineraries = [
       'Covent Garden',
     ],
   },
+  {
+    id: 3,
+    createdBy: 'Jade',
+    destination: 'Paris',
+    country: 'France',
+    route: [
+      'Eiffel Tower',
+      'the Seine',
+      'The Houses of Parliament and Westminster Abbey',
+      'the Louvre Museum',
+      'the Luxembourg Gardens',
+      'Sainte-Chapelle',
+    ],
+  },
 ]
 export default itineraries

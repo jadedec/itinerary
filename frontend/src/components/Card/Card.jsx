@@ -27,7 +27,7 @@ const Card = ({ id, destination, img, createdBy, country, route }) => {
         <p className="card-content__character card-content__character-tagline">
           {destination} in {country}
         </p>
-        <p className="card-content__character">createdBy: {createdBy} </p>
+        <p className="card-content__character">created by: {createdBy} </p>
         <p className="card-content__character"> {routeJSX}</p>
 
         {buttonJSX}

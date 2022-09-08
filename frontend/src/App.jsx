@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-d
 import Home from './pages/Home/Home'
 import All from './pages/All/All'
 import Manage from './pages/Manage/Manage'
+import New from './pages/New/New'
 
 const App = () => {
   return (
@@ -11,10 +12,9 @@ const App = () => {
         <div className="main">
           <Routes>
             <Route path="/home" element={<Home />} />
-            {/* <Route path="/new" element={<New />} />*/}
-            <Route path="/manage" element={<Manage />} /> 
             <Route path="/all" element={<All />} />
-
+            <Route path="/manage" element={<Manage />} />
+            <Route path="/new" element={<New />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         </div>

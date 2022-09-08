@@ -29,7 +29,6 @@ const Manage = () => {
         setDeleted(true);
     }
 
-
     return (
         <>
         <Layout />

@@ -24,7 +24,7 @@ const Nav = ({ search, handleInput, reset }) => {
       <Link to="/manage" className="nav__heading" onClick={reset}>
         MANAGE
       </Link>
-      <Link to="/home" className="nav__heading" onClick={reset}>
+      <Link to="/new" className="nav__heading" onClick={reset}>
         NEW
       </Link>
     </nav>
