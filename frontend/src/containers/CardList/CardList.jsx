@@ -15,11 +15,11 @@ const CardList = ({ itinerariesArr }) => {
     )
   })
 
-  const message = <p>Sorry. No beer has been found.</p>
+  const message = <p>Sorry. No itinerary has been found.</p>
 
   return (
     <div className="cardList">
-      ({itinerariesArr}?{cardListJSX}:{message})
+      {itinerariesArr.length?cardListJSX:message}
     </div>
   )
 }

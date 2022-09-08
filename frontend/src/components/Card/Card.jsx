@@ -9,22 +9,26 @@ const Card = ({ id, destination, img, createdBy, country, route }) => {
     </Link>
   )
 
+  const routeJSX = (route.map(place => {
+    return(" -> "+place )
+  })
+  )
+
   return (
     <div className="card">
-      {img ? (
+      {img ? 
         <img className="card-img" src={img} alt={destination} />
-      ) : (
+       : 
         <img className="card-img" src={pic} alt={destination} />
-      )}
-      <h3 className="card-name">{destination}</h3>
+      }
 
       <div className="card-content">
         <h3 className="card-content__name">{destination}</h3>
         <p className="card-content__character card-content__character-tagline">
           {destination} in {country}
         </p>
-        <p className="card-content__character">createdBy {createdBy} </p>
-        <p className="card-content__character"> {route}</p>
+        <p className="card-content__character">createdBy: {createdBy} </p>
+        <p className="card-content__character"> {routeJSX}</p>
 
         {buttonJSX}
       </div>

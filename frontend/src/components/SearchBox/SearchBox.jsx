@@ -1,4 +1,5 @@
 import './SearchBox.scss'
+import InputBox from '../InputBox/InputBox'
 
 const SearchBox = ({ label, search, handleInput }) => {
   return (
@@ -6,14 +7,8 @@ const SearchBox = ({ label, search, handleInput }) => {
       <label htmlFor={label} className="search-box__label">
         {label}
       </label>
-      <input
-        type="text"
-        placeholder="Search..."
-        onInput={handleInput}
-        value={search}
-        name={label}
-        className="search-box__input"
-      />
+      <InputBox label={search} className={"search-box"} placeholder={"Search..."} handleInput={handleInput}/>
+
     </form>
   )
 }

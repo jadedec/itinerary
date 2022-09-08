@@ -1,19 +1,12 @@
 import './All.scss'
 import CardList from '../../containers/CardList/CardList'
-import Nav from '../../containers/Navbar/Navbar'
 import { useState, useEffect } from 'react'
+import Layout from '../../containers/Layout/Layout'
 
 const All = () => {
   const [itineraries, setItineraries] = useState([])
 
-  const [search, setSearch] = useState('')
-
-  //handle function
-  const handleInput = event => {
-    setSearch(event.target.value)
-  }
-
-  const handleReset = () => setSearch('')
+  
 
   const getItineraries = async () => {
     let url = 'http://localhost:8080/itineraries'
@@ -28,8 +21,7 @@ const All = () => {
 
   return (
     <>
-      <Nav search={search} handleInput={handleInput} reset={handleReset} />
-
+      <Layout />
       <CardList itinerariesArr={itineraries} />
     </>
   )

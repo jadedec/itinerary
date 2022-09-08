@@ -3,41 +3,44 @@
 
 .card {
   border-radius: 15px;
-  width: 17rem;
-  height: 26rem;
+  width: 40rem;
+  height: 50rem;
+  background-color: $color-grey;
   text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  
   &-img {
-    height: 20rem;
-  }
-  &-name {
-    font-size: 1.2rem;
-    height: 2rem;
+    max-height: 20rem;
   }
 
   &-content {
-    position: relative;
+   // position: relative;
     bottom: 100%;
-    width: 17rem;
-    height: 26rem;
-    background-color: $color-grey;
+    width: 38rem;
+    height: 30rem;
+    
     color: $color-white;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
     &__name {
       padding-top: 2rem;
-      font-size: 1.5rem;
+      font-size: 3rem;
       height: 2.5rem;
     }
 
     &__character {
-      font-size: 1rem;
+      font-size: 1.8rem;
       padding: 0px 20px;
       overflow: hidden;
 
       &-tagline {
+        margin: 20px;
         font-family: 'Square Peg', cursive;
-        font-size: 1.2rem;
+        font-size: 3rem;
       }
     }
 
@@ -45,9 +48,10 @@
       color: $color-white;
       min-width: 80px;
       padding: 10px 20px;
+      margin-top: 20px;
       border-radius: 15px;
       background-color: transparent;
-      border: 2px solid $color-primary;
+      border: 2px solid $color-white;
     }
   }
 }
