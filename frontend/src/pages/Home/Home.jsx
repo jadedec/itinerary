@@ -35,8 +35,8 @@ const Home = () => {
   return (
     <>
       <Layout />
-    <div className="home">
-        <h2 className='home__title'> A trip for you</h2>
+      <div className="home">
+        <h2 className="home__title"> A trip for you</h2>
         <Card
           id={randomItinerary.id}
           destination={randomItinerary.destination}
@@ -46,7 +46,7 @@ const Home = () => {
           route={randomItinerary.route}
         />
       </div>
-</>
+    </>
   )
 }
 

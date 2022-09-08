@@ -17,11 +17,7 @@ const CardList = ({ itinerariesArr }) => {
 
   const message = <p>Sorry. No itinerary has been found.</p>
 
-  return (
-    <div className="cardList">
-      {itinerariesArr.length?cardListJSX:message}
-    </div>
-  )
+  return <div className="cardList">{itinerariesArr.length ? cardListJSX : message}</div>
 }
 
 export default CardList

@@ -7,8 +7,12 @@ const SearchBox = ({ label, search, handleInput }) => {
       <label htmlFor={label} className="search-box__label">
         {label}
       </label>
-      <InputBox label={search} className={"search-box"} placeholder={"Search..."} handleInput={handleInput}/>
-
+      <InputBox
+        label={search}
+        className={'search-box'}
+        placeholder={'Search...'}
+        handleInput={handleInput}
+      />
     </form>
   )
 }

@@ -11,7 +11,9 @@ const Layout = ({ showNavbar = true }) => {
   }
 
   const handleReset = () => setSearch('')
-  const layoutJsx = <>{showNavbar && <Nav search={search} handleInput={handleInput} reset={handleReset} />}</>
+  const layoutJsx = (
+    <>{showNavbar && <Nav search={search} handleInput={handleInput} reset={handleReset} />}</>
+  )
 
   return <div className="layout">{layoutJsx}</div>
 }

@@ -9,17 +9,17 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  
+
   &-img {
     max-height: 20rem;
   }
 
   &-content {
-   // position: relative;
+    // position: relative;
     bottom: 100%;
     width: 38rem;
     height: 30rem;
-    
+
     color: $color-white;
     border-radius: 20px;
     display: flex;

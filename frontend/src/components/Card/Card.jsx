@@ -9,18 +9,17 @@ const Card = ({ id, destination, img, createdBy, country, route }) => {
     </Link>
   )
 
-  const routeJSX = (route.map(place => {
-    return(" -> "+place )
+  const routeJSX = route.map(place => {
+    return ' -> ' + place
   })
-  )
 
   return (
     <div className="card">
-      {img ? 
+      {img ? (
         <img className="card-img" src={img} alt={destination} />
-       : 
+      ) : (
         <img className="card-img" src={pic} alt={destination} />
-      }
+      )}
 
       <div className="card-content">
         <h3 className="card-content__name">{destination}</h3>

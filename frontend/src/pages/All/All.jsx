@@ -6,8 +6,6 @@ import Layout from '../../containers/Layout/Layout'
 const All = () => {
   const [itineraries, setItineraries] = useState([])
 
-  
-
   const getItineraries = async () => {
     let url = 'http://localhost:8080/itineraries'
     const response = await fetch(url)
