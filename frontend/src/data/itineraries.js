@@ -16,13 +16,13 @@ const itineraries = [
   },
   {
     id: 2,
-    createdBy: 'Jade',
+    createdBy: 'Adam',
     destination: 'London',
     country: 'England',
     route: [
-      'The Tower of London & Tower Bridge',
-      'The South Bank and London Eye or Shard',
-      'The Houses of Parliament and Westminster Abbey',
+      'Tower Bridge',
+      'The South Bank and London Eye ',
+      'The Houses of Parliament',
       'Buckingham Palace',
       'Trafalgar Square',
       'Covent Garden',

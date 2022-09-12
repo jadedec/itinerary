@@ -10,6 +10,7 @@ const CardList = ({ itinerariesArr }) => {
         destination={itinerary.destination}
         img={itinerary.image_url}
         country={itinerary.country}
+        createdBy={itinerary.createdBy}
         route={itinerary.route}
       />
     )

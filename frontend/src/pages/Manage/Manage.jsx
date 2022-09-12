@@ -9,7 +9,9 @@ const Manage = () => {
   const [valid, setValid] = useState(false)
   const [deleted, setDeleted] = useState(false)
 
-  const handleTarget = async event => {
+
+
+  const handleTarget = async (event) => {
     const response = await fetch(`http://localhost:8080/itinerary/${event.target.value}`)
 
     if (response.ok) {
@@ -35,8 +37,8 @@ const Manage = () => {
         <h1>Mange your itineraries</h1>
         {!deleted && (
           <form onSubmit={valid ? handleDelete : handleTarget}>
-            <label htmlFor="target to delete">Itinerary ID:</label>
-            <InputBox label={'TO DELETE'} className={'manage'} placeholder={'Itinerary ID...'} />
+            <label htmlFor="target to delete">Itinerary Destination:</label>
+            <InputBox label={'TO DELETE'} className={'manage'} placeholder={'Itinerary to...'} />
             <button
               className="manage__button"
               type="submit"

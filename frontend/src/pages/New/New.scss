@@ -7,21 +7,22 @@
   text-align: center;
 
   &__form {
+.new__form--style{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    &--label {
-      margin: 8px;
-    }
-    &--label-list {
-      display: flex;
-      flex-direction: column;
-    }
+align-items: center;
+.new__form--label {
+    margin: 8px;
+}
+.new__form--label-list {
+    display: flex;
+    flex-direction: column;
+}
 
-    &--button {
-      font-size: 1rem;
-      margin: 1.5rem;
-      padding: 0.5rem;
-    }
+.new__form--button {
+    font-size: 1rem;
+    margin: 1.5rem;
+    padding: 0.5rem;
+}}
   }
 }

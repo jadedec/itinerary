@@ -1,36 +1,21 @@
 import './Home.scss'
-// import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Card from '../../components/Card/Card'
 import Layout from '../../containers/Layout/Layout'
 
 const Home = () => {
-  // const [randomItinerary, setRandomItinerary] = useState('')
+  const [randomItinerary, setRandomItinerary] = useState('')
 
-  // const getRandomItinerary = async () => {
-  //   const response = await fetch('http://localhost:8080/random-itinerary')
-  //   const randomItinerary = await response.json
-  //   setRandomItinerary(randomItinerary)
-  // }
-
-  // useEffect(() => {
-  //   getRandomItinerary()
-  // }, [])
-
-  const randomItinerary = {
-    id: 1,
-    createdBy: 'Bob',
-    destination: 'Barcelona',
-    country: 'Spain',
-    route: [
-      'La Pedrera',
-      'Casa Milà',
-      'Casa Batlló',
-      'Casa Atmetller',
-      'Plaza Catalunya',
-      'La Rambla',
-      'Font de Canaletas',
-    ],
+  const getRandomItinerary = async () => {
+    const response = await fetch('http://localhost:8080/random-itinerary')
+    const randomItinerary = await response.json
+    setRandomItinerary(randomItinerary)
   }
+
+  useEffect(() => {
+    getRandomItinerary()
+  }, [])
+
 
   return (
     <>

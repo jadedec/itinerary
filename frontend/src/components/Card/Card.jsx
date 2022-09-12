@@ -10,7 +10,7 @@ const Card = ({ id, destination, img, createdBy, country, route }) => {
   )
 
   const routeJSX = route.map(place => {
-    return ' -> ' + place
+    return (place+"  ->  ")
   })
 
   return (

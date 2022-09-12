@@ -14,11 +14,11 @@ const New = () => {
         route.push(event.target[i].value)
       }
     }
-
-    await fetch(`http://localhost:8080/itinerary/create`, {
+    try {
+      await fetch(`http://localhost:8080/itinerary`, {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+        "Content-type": "application/json; charset=UTF-8'",
       },
       body: JSON.stringify({
         destination: `${event.target[0].value}`,
@@ -29,7 +29,9 @@ const New = () => {
       }),
     })
     setSubmit(true)
-  }
+    }catch (error) {
+    console.log(error);
+  }}
 
   useEffect(() => {
     handleSubmit()
@@ -37,7 +39,7 @@ const New = () => {
 
   const message = 'new itinerary added successfully'
   const newJSX = (
-    <div className="new__form">
+    <div className="new__form--style">
       <label className="new__form--label" htmlFor="destination">
         Destination:
       </label>
@@ -84,8 +86,11 @@ const New = () => {
     <>
       <Layout />
       <div className="new">
-        <h1>Add new itinerary</h1>
-        {submit ? message : newJSX}
+              <h1>Add new itinerary</h1>
+              <form className='new__form' onSubmit={handleSubmit}>
+                  {submit ? message : newJSX}
+              </form>
+        
       </div>
     </>
   )
