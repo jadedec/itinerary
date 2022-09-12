@@ -15,7 +15,6 @@ public class ItineraryService {
     @Autowired
     ItineraryRepository itineraryRepository;
 
-    // get all the greetings ids (int)
     public List<Integer> extractIds() {
         List<Itinerary> greetings = itineraryRepository.findAll();
         return greetings.stream().map(itinerary -> itinerary.getId()).collect(Collectors.toList());
